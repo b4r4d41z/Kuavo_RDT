@@ -32,6 +32,8 @@ def process_hdf5_dataset(vla_dataset):
         # Zero the values that are close to zero
         z_states = states.copy()
         z_states[np.abs(states) <= EPS] = 0
+
+
         # Compute the non-zero count
         if nz_state_cnt is None:
             nz_state_cnt = np.zeros(states.shape[1])

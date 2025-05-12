@@ -13,7 +13,7 @@ import numpy as np
 from tqdm import tqdm
 
 from data.vla_dataset import VLADataset
-from data.hdf5_vla_dataset import HDF5VLADataset
+from Kuavo_RDT.data.hdf5_vla_dataset_origin import HDF5VLADataset
 from data.preprocess import generate_json_state
 
 

@@ -14,7 +14,7 @@ from PIL import Image
 import transformers
 
 from data.filelock import FileLock
-from data.hdf5_vla_dataset import HDF5VLADataset
+from Kuavo_RDT.data.hdf5_vla_dataset_origin import HDF5VLADataset
 from train.image_corrupt import image_corrupt
 
 

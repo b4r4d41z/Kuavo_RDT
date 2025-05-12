@@ -1,114 +1,30 @@
 STATE_VEC_IDX_MAPPING = {
-    # [0, 10): right arm joint positions
-    **{
-        'arm_joint_{}_pos'.format(i): i for i in range(10)
-    },
-    **{
-        'right_arm_joint_{}_pos'.format(i): i for i in range(10)
-    },
-    # [10, 15): right gripper joint positions
-    **{
-        'gripper_joint_{}_pos'.format(i): i + 10 for i in range(5)
-    },
-    **{
-        'right_gripper_joint_{}_pos'.format(i): i + 10 for i in range(5)
-    },
-    'gripper_open': 10, # alias of right_gripper_joint_0_pos
-    'right_gripper_open': 10,
-    # [15, 25): right arm joint velocities
-    **{
-        'arm_joint_{}_vel'.format(i): i + 15 for i in range(10)
-    },
-    **{
-        'right_arm_joint_{}_vel'.format(i): i + 15 for i in range(10)
-    },
-    # [25, 30): right gripper joint velocities
-    **{
-        'gripper_joint_{}_vel'.format(i): i + 25 for i in range(5)
-    },
-    **{
-        'right_gripper_joint_{}_vel'.format(i): i + 25 for i in range(5)
-    },
-    'gripper_open_vel': 25, # alias of right_gripper_joint_0_vel
-    'right_gripper_open_vel': 25,
-    # [30, 33): right end effector positions
-    'eef_pos_x': 30,
-    'right_eef_pos_x': 30,
-    'eef_pos_y': 31,
-    'right_eef_pos_y': 31,
-    'eef_pos_z': 32,
-    'right_eef_pos_z': 32,
-    # [33, 39): right end effector 6D pose
-    'eef_angle_0': 33,
-    'right_eef_angle_0': 33,
-    'eef_angle_1': 34,
-    'right_eef_angle_1': 34,
-    'eef_angle_2': 35,
-    'right_eef_angle_2': 35,
-    'eef_angle_3': 36,
-    'right_eef_angle_3': 36,
-    'eef_angle_4': 37,
-    'right_eef_angle_4': 37,
-    'eef_angle_5': 38,
-    'right_eef_angle_5': 38,
-    # [39, 42): right end effector velocities
-    'eef_vel_x': 39,
-    'right_eef_vel_x': 39,
-    'eef_vel_y': 40,
-    'right_eef_vel_y': 40,
-    'eef_vel_z': 41,
-    'right_eef_vel_z': 41,
-    # [42, 45): right end effector angular velocities
-    'eef_angular_vel_roll': 42,
-    'right_eef_angular_vel_roll': 42,
-    'eef_angular_vel_pitch': 43,
-    'right_eef_angular_vel_pitch': 43,
-    'eef_angular_vel_yaw': 44,
-    'right_eef_angular_vel_yaw': 44,
-    # [45, 50): reserved 
-    # [50, 60): left arm joint positions
-    **{
-        'left_arm_joint_{}_pos'.format(i): i + 50 for i in range(10)
-    },
-    # [60, 65): left gripper joint positions
-    **{
-        'left_gripper_joint_{}_pos'.format(i): i + 60 for i in range(5)
-    },
-    'left_gripper_open': 60, # alias of left_gripper_joint_0_pos
-    # [65, 75): left arm joint velocities
-    **{
-        'left_arm_joint_{}_vel'.format(i): i + 65 for i in range(10)
-    },
-    # [75, 80): left gripper joint velocities
-    **{
-        'left_gripper_joint_{}_vel'.format(i): i + 75 for i in range(5)
-    },
-    'left_gripper_open_vel': 75, # alias of left_gripper_joint_0_vel
-    # [80, 83): left end effector positions
-    'left_eef_pos_x': 80,
-    'left_eef_pos_y': 81,
-    'left_eef_pos_z': 82,
-    # [83, 89): left end effector 6D pose
-    'left_eef_angle_0': 83,
-    'left_eef_angle_1': 84,
-    'left_eef_angle_2': 85,
-    'left_eef_angle_3': 86,
-    'left_eef_angle_4': 87,
-    'left_eef_angle_5': 88,
-    # [89, 92): left end effector velocities
-    'left_eef_vel_x': 89,
-    'left_eef_vel_y': 90,
-    'left_eef_vel_z': 91,
-    # [92, 95): left end effector angular velocities
-    'left_eef_angular_vel_roll': 92,
-    'left_eef_angular_vel_pitch': 93,
-    'left_eef_angular_vel_yaw': 94,
-    # [95, 100): reserved
-    # [100, 102): base linear velocities
-    'base_vel_x': 100,
-    'base_vel_y': 101,
-    # [102, 103): base angular velocities
-    'base_angular_vel': 102,
-    # [103, 128): reserved
+    # 6D representation of left end effector (EEF) (indices 0–5)
+    'left_eef_x': 0,
+    'left_eef_y': 1,
+    'left_eef_z': 2,
+    'left_eef_rx': 3,
+    'left_eef_ry': 4,
+    'left_eef_rz': 5,
+    # Orientation of left hand in RPY (indices 6–8)
+    'left_roll': 6,
+    'left_pitch': 7,
+    'left_yaw': 8,
+    # Left hand gripper (index 9)
+    'left_gripper': 9,
+    # 6D representation of right end effector (EEF) (indices 10–15)
+    'right_eef_x': 10,
+    'right_eef_y': 11,
+    'right_eef_z': 12,
+    'right_eef_rx': 13,
+    'right_eef_ry': 14,
+    'right_eef_rz': 15,
+    # Orientation of right hand in RPY (indices 16–18)
+    'right_roll': 16,
+    'right_pitch': 17,
+    'right_yaw': 18,
+    # Right hand gripper (index 19)
+    'right_gripper': 19,
 }
-STATE_VEC_LEN = 128
+
+STATE_VEC_LEN = len(STATE_VEC_IDX_MAPPING)  # = 20

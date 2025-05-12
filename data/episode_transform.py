@@ -3,7 +3,7 @@ import tensorflow as tf
 import yaml
 
 from data.preprocess import generate_json_state
-from configs.state_vec import STATE_VEC_IDX_MAPPING
+from Kuavo_RDT.configs.state_vec import STATE_VEC_IDX_MAPPING
 
 
 # Read the config
